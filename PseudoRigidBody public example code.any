@@ -1,0 +1,466 @@
+Main = {
+  
+  AnyFolder Model = {
+    AnyFixedRefFrame GlobalRef = {
+      viewRefFrame = {
+        Visible = On;
+        ScaleXYZ = {0.05, 0.05, 0.05};
+      };
+    };
+    
+    
+    // Define segment length of all segments
+    AnyFloat SegmentLength = 0.08; 
+    
+    // Define all segments
+    AnySeg S1 = {
+      r0 = {0.025, 8.077936e-29, 0.0};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };
+    
+    AnySeg S2 = {
+      r0 = {0.075, -2.423381e-28, 0.0};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };
+    
+    AnySeg S3 = {
+      r0 = {0.125, 3.074843e-23, 1.193959e-13};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };
+    
+    AnySeg S4 = {
+      r0 = {0.1749897, 0.0007182037, 1.795648e-13};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };   
+    
+    AnySeg S5 = {
+      r0 = {0.2249438, 0.002769417, -7.68717e-12};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };  
+    
+    AnySeg S6 = {
+      r0 = {0.2748401, 0.005946871, -3.422486e-11};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };  
+    
+    AnySeg S7 = {
+      r0 = {0.3246703, 0.01004413, -8.547085e-11};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };  
+
+    AnySeg S8 = {
+      r0 = {0.3744373, 0.01485551, -1.570393e-10};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };
+    
+    AnySeg S9 = {
+      r0 = {0.424153, 0.02017616, -2.369708e-10};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };
+    
+    AnySeg S10 = {
+      r0 = {0.4738353, 0.02580204, -3.18377e-10};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {-..SegmentLength*0.5,0,0};
+      };
+      AnyRefNode N2 = {
+        sRel = {..SegmentLength*0.5,0,0};
+      };
+      AnyDrawPLine SegLine = {RGB = {0.92, 0.77, 0.07};};
+    };
+    
+    // Create node to drive the tip to
+    AnySeg DriveNode = {
+      r0 = {0.5,0,0};
+      Mass = 0;
+      Jii = {0,0,0};
+      AnyRefNode N1 = {
+        sRel = {0,0,0};
+      };
+      AnyDrawNode Node = {
+        RGB = {0.65, 0.65, 0.65};
+        ScaleXYZ = {0.005, 0.005, 0.005};
+      };
+    };
+
+  };// model
+  
+  
+ //******************************************** 
+ AnyFolder Joints = {
+   
+    // Joint to global Ref Frame
+    AnyStdJoint GRefS1 = {
+      AnyRefFrame &GRef = ..Model.GlobalRef;
+      AnyRefFrame &S1 = ..Model.S1.N1;
+      
+      // Draw reaction forces at the fixed end
+      AnyDrawVector ReactionForce = {
+        AnyFloat scale = 0.001;
+        Vec = {...Main.Joints.GRefS1.Constraints.Reaction.Fout[0]*scale,...Main.Joints.GRefS1.Constraints.Reaction.Fout[1]*scale,...Main.Joints.GRefS1.Constraints.Reaction.Fout[2]*scale};
+        AnyRefFrame &GRef = ...Model.GlobalRef;
+      };
+    };
+    
+    //Joints in Beam
+    AnyStdJoint S1S2 = {
+      AnyRefFrame &S1 = ..Model.S1.N2;
+      AnyRefFrame &S2 = ..Model.S2.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard}; // This is where you define you FDK DOF. If you want to use it in other orientations you can change that here. You can also define two FDK DOFs.
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+
+    AnyStdJoint S2S3 = {
+      AnyRefFrame &S2 = ..Model.S2.N2;
+      AnyRefFrame &S3 = ..Model.S3.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+
+    AnyStdJoint S3S4 = {
+      AnyRefFrame &S3 = ..Model.S3.N2;
+      AnyRefFrame &S4 = ..Model.S4.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+    
+    AnyStdJoint S4S5 = {
+      AnyRefFrame &S4 = ..Model.S4.N2;
+      AnyRefFrame &S5 = ..Model.S5.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+    
+    AnyStdJoint S5S6 = {
+      AnyRefFrame &S5 = ..Model.S5.N2;
+      AnyRefFrame &S6 = ..Model.S6.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+    
+    AnyStdJoint S6S7 = {
+      AnyRefFrame &S6 = ..Model.S6.N2;
+      AnyRefFrame &S7 = ..Model.S7.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+    
+    AnyStdJoint S7S8 = {
+      AnyRefFrame &S7 = ..Model.S7.N2;
+      AnyRefFrame &S8 = ..Model.S8.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+    
+    AnyStdJoint S8S9 = {
+      AnyRefFrame &S8 = ..Model.S8.N2;
+      AnyRefFrame &S9 = ..Model.S9.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+    
+    AnyStdJoint S9S10 = {
+      AnyRefFrame &S9 = ..Model.S9.N2;
+      AnyRefFrame &S10 = ..Model.S10.N1;
+      Constraints = {
+        CType = {Hard,Hard,Hard,ForceDep,Hard,Hard};
+        Reaction.Type = {On,On,On,Off,On,On};
+      };
+    };
+  }; // Joints
+
+  
+//********************************************  
+  AnyFolder ForceAndSprings = {   
+        
+    //Variables
+    AnyFloat Stiffness = -1.5;  //Nm/rad
+    AnyFloat Gain = 10000;       //N
+
+    // Definition of the Constraint Force
+    AnyForce ConstraintForce = {
+      
+      AnyKinMeasureOrg measr = {
+        AnyKinLinear lin ={
+          AnyRefFrame &base = ..Main.Model.S10.N2;
+          AnyRefFrame &target = ..Main.Model.DriveNode.N1;
+        };
+        
+        AnyKinRotational rot = {
+          AnyRefFrame &base = ..Main.Model.S10.N2;
+          AnyRefFrame &target = ..Main.Model.DriveNode.N1;
+          Type = RotAxesAngles;
+        };
+        MeasureOrganizer = {0,1,2};
+      };
+      
+      //Define the length of the force ramp up
+      AnyVar numRamp = 10; // specify
+      
+      AnyVar step = ..Main.Study.iStep;
+      AnyVar nstep = ..Main.Study.nStep;
+      AnyVar ramp =(cos((step/numRamp)*pi)-1)*-0.5;
+      AnyVar const = 1;
+      
+      //If function 
+      AnyVar rampGain = iffun(ltfun(step,numRamp), ramp, const);
+      
+      
+      //Define the force ramp down
+      //This is the example of the ramp down. This can be turned off if ramp down is not needed.
+      AnyVar numRampdown = 3;      // specify 
+      
+      AnyVar startRampdown = nstep - numRampdown;
+      AnyVar count = step - startRampdown; 
+      AnyVar rampdown = (cos((count/numRampdown)*pi)+1)*0.5;
+      
+      //If function
+      AnyVar rampGaindown = iffun(ltfun(step,startRampdown), const, rampdown);
+      
+      //Calculte the force
+      F = -.Gain*measr.Pos*rampGain*rampGaindown;
+      viewForce.Visible = On;
+      
+    }; // Constraint Force
+
+
+//  //  Alternative method to implement the Constraint Force 
+//  AnyForce ConstraintForce2 = {
+//    
+//    //Linear measure
+//    AnyKinMeasureOrg measr = {
+//      AnyKinLinear lin ={
+//        AnyRefFrame &base   = ..Main.Model.S10.N2;
+//        AnyRefFrame &target = ..Main.Model.DriveNode.N1;
+//      };
+//      
+//      //rotational measure must be definded too. Will not be used tho
+//      AnyKinRotational rot = {
+//        AnyRefFrame &base   = ..Main.Model.S10.N2;
+//        AnyRefFrame &target = ..Main.Model.DriveNode.N1;
+//        Type = RotAxesAngles;
+//      };
+//      
+//      // Measure organizer
+//      MeasureOrganizer = {0,1,2};
+//    };
+//    
+//    //define the force ramp up   
+//    AnyVar step = ..Main.Study.iStep;  //call current step
+//    AnyVar numRamp = 40;                                   //number of step to ramp up
+//    AnyVar ramp =(cos((step/numRamp)*pi)-1)*-0.5;          // ramp up function
+//    AnyVar const = 1;                                      //constant value after the ramp up
+//    
+//    //If function
+//    AnyVar rampGain = iffun(ltfun(step,numRamp), ramp, const);
+//    
+//    F = -.Gain*rampGain*(measr.Pos);
+//    viewForce.Visible = On;
+//    
+//  }; //ConstraintForce2
+
+
+//Apply the FDK DOFs 
+    AnyForce Stiffness_S1S2 = {
+      AnyKinRotational &rot = ..Joints.S1S2.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    
+    AnyForce Stiffness_S2S3 = {
+      AnyKinRotational &rot = ..Joints.S2S3.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+
+    AnyForce Stiffness_S3S4 = {
+      AnyKinRotational &rot = ..Joints.S3S4.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    AnyForce Stiffness_S4S5 = {
+      AnyKinRotational &rot = ..Joints.S4S5.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    AnyForce Stiffness_S5S6 = {
+      AnyKinRotational &rot = ..Joints.S5S6.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    AnyForce Stiffness_S6S7 = {
+      AnyKinRotational &rot = ..Joints.S6S7.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    AnyForce Stiffness_S7S8 = {
+      AnyKinRotational &rot = ..Joints.S7S8.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    
+    AnyForce Stiffness_S8S9 = {
+      AnyKinRotational &rot = ..Joints.S8S9.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    
+    AnyForce Stiffness_S9S10 = {
+      AnyKinRotational &rot = ..Joints.S9S10.Orientation;
+      F = {.Stiffness*rot.Pos[0]*180/pi, 0, 0};
+    };
+    
+  }; // Force and springs
+  
+ 
+//********************************************
+
+//Create the drive that drives the tip to the target position
+AnyFolder Driver ={
+  
+  AnyKinEqSimpleDriver driver_tip = {
+    
+    AnyKinLinear lin ={
+      AnyRefFrame &base = ..Main.Model.GlobalRef;
+      AnyRefFrame &target = ..Main.Model.DriveNode.N1;
+      Ref = 0;
+    };
+    
+    AnyKinRotational rot = {
+      AnyRefFrame &base = ..Main.Model.GlobalRef;
+      AnyRefFrame &target = ..Main.Model.DriveNode.N1;
+      Type = RotAxesAngles;
+    };
+    
+    //Define the target position
+    DriverPos = {0.5,-0.3,0,0,0,0};  //Specify
+    DriverVel = {0,0,0,0,0,0};
+    DriverAcc = {0,0,0,0,0,0};    
+  }; //driver_tip
+  
+}; //Driver
+
+
+//********************************************
+  AnyBodyStudy Study = {
+    Gravity = {0,0,0};
+    tStart = 0;
+    tEnd = 1;
+    nStep = 200;
+    InverseDynamics.ForceDepKinOnOff = On;
+    InverseDynamics.ForceDepKin.Perturbation = 1e-5;   
+    InverseDynamics.ForceDepKin.MaxNewtonStep = 0.001; 
+    AnyFolder &model = .Model;
+    AnyFolder &Joints = .Joints;
+    AnyFolder &Force = .ForceAndSprings;
+    AnyFolder &Driver = .Driver;
+  }; // Study
+  
+  
+    //Example code to output variables
+    
+//  //Output file
+//  AnyOutputFile OFile1 = {
+//    FileName = "example.txt";
+//    
+//    //Points on Segements
+//    AnyFloat point_01 = .Model.S1.N2.r;
+//    AnyFloat point_02 = .Model.S2.N2.r;
+//    AnyFloat point_03 = .Model.S3.N2.r;
+//    AnyFloat point_04 = .Model.S4.N2.r;
+//    AnyFloat point_05 = .Model.S5.N2.r;
+//    AnyFloat point_06 = .Model.S6.N2.r;
+//    AnyFloat point_07 = .Model.S7.N2.r;
+//    AnyFloat point_08 = .Model.S8.N2.r;
+//    AnyFloat point_09 = .Model.S9.N2.r;
+//    AnyFloat point_10 = .Model.S10.N2.r;
+//    
+//    //characteristics
+//    AnyFloat stiffness = .Main.ForceAndSprings.Stiffness;
+//  };// Output file  
+
+}; // Main
+  
+  
